@@ -38,57 +38,7 @@
 <section class="comments panel center borderless margin-block flex flex-column gap" style="--splat-color: <%= @splat.color %>;">
 
   <hr />
-
-  <div class="comment flex align-start gap">
-    <header class="full-width margin-block">
-      Added by <strong><%= @splat.creator.name %></strong> on <%= @splat.created_at.strftime("%B %d") %> (<%= time_ago_in_words @splat.created_at %> ago).
-    </header>
-  </div>
-
-  <hr />
-
-  <div class="comment flex align-start gap">
-    <div class="flex align-center gap">
-      <span class="avatar fill-shade flex-item-no-shrink"><strong>JZ</strong></span>
-      <header class="full-width flex align-center gap">
-        <strong>Jason Zimdars</strong>
-      </header>
-    </div>
-    <div class="comment__body txt-align-start">
-      <p class="margin-none-block-start">I'll be speaking in Chicago early next month at the ABA convention and they'll be sharing this resource with all State Bar Presidents. I mentioned Writebook in the intro towards the bottom. The platform is awesome! </p>
-    </div>
-  </div>
-
-  <hr />
-
-  <div class="comment flex align-start gap">
-    <div class="flex align-center gap">
-      <span class="avatar fill-selected flex-item-no-shrink"><strong>JF</strong></span>
-      <header class="full-width flex align-center gap">
-        <strong>Jason Fried</strong>
-      </header>
-    </div>
-    <div class="comment__body txt-align-start">
-      <p class="margin-none-block-start">Never mind, I nipped home and tried it on Browser Stack. It's working correctly on Windows with Edge, Chrome & Firefox. </p>
-    </div>
-  </div>
-
-  <hr />
-
-  <div class="comment flex align-start gap">
-    <div class="flex align-center gap">
-      <span class="avatar fill-black txt-reversed flex-item-no-shrink"><strong>JF</strong></span>
-      <header class="full-width flex align-center gap">
-        <strong>Kevin McConnell</strong>
-      </header>
-    </div>
-    <div class="comment__body txt-align-start">
-      <p class="margin-none-block-start">If this is only happening to one site, and potentially has already resolved itself, then I'll just dig into this on Monday and see if I can find an explanation or a way to reproduce it. Hopefully this isn't a sign of something more common, but so far doesn't sound like it. </p>
-      <p>But if you hear about something similar happening to anyone else, please flag it here and I'll look more urgently.</p>
-    </div>
-  </div>
-
-  <hr />
+  <%= render @splat.comments %>
 
   <button class="btn btn--positive center">
     <%= image_tag "add.svg", aria: { hidden: true }, size: 24 %>

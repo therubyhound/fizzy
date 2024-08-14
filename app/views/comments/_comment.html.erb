@@ -1,0 +1,13 @@
+<div class="comment flex align-start gap">
+  <div class="flex align-center gap full-width">
+    <span class="avatar fill-black txt-reversed flex-item-no-shrink"><strong><%= comment.creator.initials %></strong></span>
+    <header class="full-width flex align-center gap">
+      <strong><%= comment.creator.name %></strong>
+    </header>
+  </div>
+  <div class="comment__body txt-align-start">
+    <%= simple_format comment.body %>
+  </div>
+</div>
+
+<hr />

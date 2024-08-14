@@ -11,6 +11,10 @@ class User < ApplicationRecord
     self == Current.user
   end
 
+  def initials
+    name.scan(/\b\w/).join
+  end
+
   def deactivate
     transaction do
       sessions.delete_all

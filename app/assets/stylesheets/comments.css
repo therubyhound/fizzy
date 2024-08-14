@@ -40,3 +40,9 @@
   inline-size: 100%;
   flex-wrap: wrap;
 }
+
+.comment__body {
+  p:first-child {
+    margin-block-start: 0;
+  }
+}

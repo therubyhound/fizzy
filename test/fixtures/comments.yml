@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: I agree.
+  creator: :jz
+  splat: :one
+
+two:
+  body: Same, let’s do it.
+  creator: :kevin
+  splat: :one

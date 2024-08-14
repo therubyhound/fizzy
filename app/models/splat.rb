@@ -1,6 +1,7 @@
 class Splat < ApplicationRecord
   has_many :categorizations
   has_many :categories, through: :categorizations, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   belongs_to :creator, class_name: "User", default: -> { Current.user }
 
