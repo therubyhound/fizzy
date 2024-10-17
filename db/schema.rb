@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_10_15_224007) do
+ActiveRecord::Schema[8.0].define(version: 2024_10_17_202003) do
   create_table "accesses", force: :cascade do |t|
     t.integer "bucket_id", null: false
     t.integer "user_id", null: false
@@ -86,7 +86,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_10_15_224007) do
     t.json "filters", default: {}, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["bucket_id"], name: "index_bucket_views_on_bucket_id"
+    t.index ["bucket_id", "creator_id", "filters"], name: "index_bucket_views_on_bucket_id_and_creator_id_and_filters", unique: true
     t.index ["creator_id"], name: "index_bucket_views_on_creator_id"
   end
 
